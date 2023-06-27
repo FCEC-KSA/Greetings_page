@@ -91,8 +91,10 @@ document.getElementById("greetingForm").addEventListener("submit", function(even
             // create a text object
             var text = new fabric.IText(name, { left: 50,
                  top: 50,
-                fontSize: 65,
+                fontSize: 45,
                 fill: '#035CA3',
+                splitByGrapheme: true,
+                width: 350,                               
                 fontFamily: 'GraphikWide-Thin,sans-serif',  });
 
             text.set({
@@ -114,7 +116,7 @@ document.getElementById("greetingForm").addEventListener("submit", function(even
 
             // Center the text vertically and adjust the position to just below center
              canvas.centerObjectV(text);
-             text.top += text.height * 10.5;
+             text.top += text.height * 15;
 
             // add the text to the canvas
             canvas.add(text);
