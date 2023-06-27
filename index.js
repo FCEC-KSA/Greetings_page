@@ -11,7 +11,8 @@ var languageStrings = {
         enterYourName: "أدخل أسمك",
         chooseTemplate: "اختر قالبًا",
         generate: "يولد",
-        pleaseSelectTemplate: "اختر قالبًا"
+        pleaseSelectTemplate: "اختر قالبًا",
+        fontFamily: 'Sakkal Majalla, sans-serif !important',
     }
 };
 

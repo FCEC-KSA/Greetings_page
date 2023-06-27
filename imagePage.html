@@ -5,8 +5,8 @@
 </head>
 <body>
     <img id="generatedImage" src="" style="width:100%; height:auto;"/>
+    <a id="downloadLink" href="" download="greetingImage.png" style="display: none;">Download</a>
 </body>
-</html>
 <script>
     // Get the img tag
     let img = document.getElementById("generatedImage");
@@ -16,4 +16,17 @@
 
     // Set the dataURL as the src of the img tag
     img.src = dataURL;
+
+    // Set the href of the download link and click it to start the download
+    document.getElementById("downloadLink").href = dataURL;
+    document.getElementById("downloadLink").click();
+
+    // Wait for 5 seconds, then redirect back to form page
+    setTimeout(function() {
+        window.location.href = "index.html"; // replace with the actual path to your form
+    }, 5000);
+
+    // Remove the image data from the local storage after it has been loaded
+    localStorage.removeItem("generatedImage");
 </script>
+</html>
