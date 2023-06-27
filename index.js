@@ -114,7 +114,7 @@ document.getElementById("greetingForm").addEventListener("submit", function(even
 
             // Center the text vertically and adjust the position to just below center
              canvas.centerObjectV(text);
-             text.top += text.height * 6.5;
+             text.top += text.height * 10.5;
 
             // add the text to the canvas
             canvas.add(text);
