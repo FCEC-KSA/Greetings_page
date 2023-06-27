@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+    direction: ltr;
     width: 70%;
     height: 100%;
     max-width: 600px;
@@ -38,6 +39,45 @@ body {
     max-width: 220px;  /* adjust this as per your needs */
     height: auto;
 }
+
+#languageSelection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+#languageSelection label {
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000;
+    padding-top: 3px;
+}
+
+#languageSelection select {
+    padding: 5px 20px;
+    font-size: 0.8em;
+    border: 1px solid #888;
+    border-radius: 5px;
+    color: #444;
+    background: #fff;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#languageSelection select:focus {
+    outline: none;
+    border-color: #035CA3;
+}
+
+#languageSelection option {
+    padding: 10px 20px;
+}
+
 
 
 h1 {
@@ -100,8 +140,8 @@ h1 {
 .template-container {
     display: flex;
     justify-content: center;  /* space out the items evenly */
-    flex-wrap: wrap;  /* allow the items to wrap to the next line if the container is too small */
-    /* add any additional styling you need for the container */
+    flex-wrap: wrap;
+    margin-bottom: 12px;
 }
 
 .template-option {
@@ -132,13 +172,10 @@ h1 {
 
 
 #greetingDisplay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;  /* adjust these values */
-    height: 600px; /* adjust these values */
-    border: 1px solid #ccc;
+    width: 100%;  /* adjust as needed */
+    height: auto; /* adjust as needed */
+    max-width: 100%; /* ensure it doesn't overflow its container */
+    overflow: hidden; /* hide any overflow */
 }
 
 #greetingDisplay.selected {
