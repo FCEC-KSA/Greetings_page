@@ -26,6 +26,34 @@ body {
     opacity: 1;
 }
 
+#box {
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+}
+#box div {
+    width:16.66vw;
+    height:100%;
+    display:inline-block;
+}
+.box1 {
+    background:rgb(255, 255, 255);
+}
+.box2 {
+    background:rgb(255, 255, 255);
+    margin-left:-5px;
+}
+
+
+#particles-js {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index: -1;
+
+}
+
 
 .logo-container {
     display: flex;
@@ -41,12 +69,14 @@ body {
 }
 
 #languageSelection {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
     margin-bottom: 20px;
     font-size: 1.1em;
+    z-index: 1;
 }
 
 #languageSelection label {
