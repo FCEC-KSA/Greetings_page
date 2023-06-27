@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eid Greeting Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src='https://unpkg.com/fabric@latest/dist/fabric.js'></script>
+
+
+</head>
+<body>
+    <div class="logo-container">
+        <img src="assets/logo.webp" alt="Logo">
+    </div>
+    <div class="container">
+        <h1>Eid Greetings Page</h1>
+        <form id="greetingForm">
+            <label for="name">Enter your name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="template">Choose a template:</label><br>
+            <div class="template-container">
+                <div class="template-option" data-template="GREETINGS_11.webp">
+                    <img src="assets/GREETINGS_11.webp" alt="Template 1">
+                </div>
+                <div class="template-option" data-template="GREETINGS_22.webp">
+                    <img src="assets/GREETINGS_22.webp" alt="Template 2">
+                </div>
+          </div>
+            <input type="submit" class="create" value="Generate">
+        </form>
+
+
+            <canvas id="greetingDisplay" class="greetingCard"></canvas>
+
+
+        <a id="downloadBtn" style="display: none;">Download</a>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
