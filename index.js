@@ -38,6 +38,41 @@ document.getElementById('language').addEventListener('change', changeLanguage);
 // Call the function to set the initial language
 changeLanguage();
 
+window.addEventListener('load', function() {
+    var file = localStorage.getItem('bgImage');
+    if (file) {
+        // Create new image to check if the localStorage URL is valid
+        var img = new Image();
+        img.onload = function() {
+            // If loading was successful, set the image as background
+            document.body.style.backgroundImage = 'url(' + file + ')';
+        };
+        img.onerror = function() {
+            // If there was an error loading the image (e.g. due to invalid URL), use default image
+            document.body.style.backgroundImage = 'url(assets/background2.webp)';
+        };
+        img.src = file;
+    } else {
+        // If there is no localStorage item, use default image
+        document.body.style.backgroundImage = 'url(assets/background2.webp)';
+    }
+});
+
+document.getElementById('bgImage').addEventListener('change', function() {
+    if (this.files && this.files[0]) {
+        var file = URL.createObjectURL(this.files[0]);
+        document.body.style.backgroundImage = 'url(' + file + ')';
+        localStorage.setItem('bgImage', file);
+    }
+});
+
+
+
+document.getElementById('uploadButton').addEventListener('click', function() {
+    document.getElementById('bgImage').click();
+});
+
+
 
 var canvas = new fabric.Canvas('greetingDisplay');
 
